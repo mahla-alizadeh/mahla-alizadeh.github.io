@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mahla Alizadeh · Human-AI Interaction Researcher</title>
-<meta name="description" content="Mahla Alizadeh, Human-AI Interaction Researcher (PhD). In-depth research on how people experience AI products over time, where trust grows and where it breaks.">
+<meta name="description" content="Mahla Alizadeh, Human-AI Interaction Researcher. I study relationships with conversational AI over time: how trust and acceptance grow, how these relationships can get exploited, and who is accountable when they are.">
 <meta name="author" content="Mahla Alizadeh">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -902,9 +902,24 @@ nav.main a.on{color:var(--ink)}
 .editing .rv,.editing .rv-img{opacity:1!important;transform:none!important;clip-path:none!important}
 @media (prefers-reduced-motion: reduce){.mo .rv,.mo .rv-img,.mo .hero-side>*,.mo .thesis>*,.mo .hero h1 span,.mo .tl-wrap *{opacity:1!important;transform:none!important;clip-path:none!important;animation:none!important}.tk-track{animation:none}.profile figure img{transform:none}}
 
+
+/* what I study */
+.study{border-top:1px solid var(--ink);padding-top:28px;margin:-40px 0 96px;display:grid;gap:28px}
+.study-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:32px;align-items:start}
+.study-lede{font-family:var(--display);font-size:clamp(19px,2vw,24px);line-height:1.4;font-weight:500;max-width:62ch}
+.study-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.study-card{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0;transition:border-color .2s,transform .2s,background .2s}
+.study-card b{font-family:var(--display);font-size:22px;line-height:1.15}
+.study-card>span:not(.label){font-size:14.5px;color:var(--muted);line-height:1.45}
+.study-card em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--accent)}
+.study-card:hover,.study-card:focus-visible{border-color:var(--ink);transform:translateY(-3px);background:var(--surface)}
+@media (max-width:980px){.study-cards{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.study-head{grid-template-columns:1fr;gap:12px}}
+@media (max-width:520px){.study-cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <div class="progress" id="progress" aria-hidden="true"></div>
 <header class="top" id="top">
   <div class="wrap">
@@ -927,11 +942,11 @@ nav.main a.on{color:var(--ink)}
       <div class="hero-side">
         <span class="status"><i></i>Open to collaboration</span>
         <p class="role">Human-AI Interaction<br>Researcher</p>
-        <p class="label">Conversational AI · AI agents · Human-AI teaming</p>
+        <p class="label">Human-AI relationships over time · Trust · Exploitation &amp; scambots</p>
       </div>
     </div>
     <div class="thesis">
-      <p>I study in depth how people experience AI products over time, where trust grows and where it breaks, and turn it into frameworks and tools teams can act on.</p>
+      <p>I study relationships with conversational AI over time: how trust and acceptance grow, and how these relationships can get exploited.</p>
       <div class="pills">
         <a class="pill solid" href="#work">See my work</a>
         <a class="pill" href="https://www.linkedin.com/in/mahla-alizadeh/" target="_blank" rel="noopener">LinkedIn</a>
@@ -975,6 +990,18 @@ nav.main a.on{color:var(--ink)}
     <div><b>5</b><span>awards, incl. Best Paper, Best Poster, Teaching and UX Design</span></div>
     <div><b>10+</b><span>university courses taught on AI and HCI</span></div>
   </div>
+  <section class="study" id="study" aria-labelledby="study-h">
+    <div class="study-head">
+      <p class="label" id="study-h">What I study</p>
+      <p class="study-lede">People now live with conversational AI as companions, matchmakers and teammates. Each of these relationships can build trust, and each can be exploited: by scammers, by the companies behind the system, or by the system itself. I follow these relationships in people's everyday lives over months and years, design conversational AI that people can trust and hold to account, and bring the findings into responsible, human-centred AI and AI governance.</p>
+    </div>
+    <div class="study-cards">
+      <button type="button" class="study-card" data-go="companion"><span class="label">01</span><b>AI companions</b><span>Voice assistants that move into the household, and what they learn about the people they live with</span><em>3 cases →</em></button>
+      <button type="button" class="study-card" data-go="matchmaker"><span class="label">02</span><b>AI matchmakers</b><span>Algorithms that decide who we meet, while the business model works best if we keep searching</span><em>1 case →</em></button>
+      <button type="button" class="study-card" data-go="teammate"><span class="label">03</span><b>AI teammates</b><span>Bots that join our work: which roles they should take, and when colleagues trust and accept them</span><em>1 case →</em></button>
+      <button type="button" class="study-card" data-go="scam"><span class="label">04</span><b>Scambots</b><span>Bots and synthetic voices that pretend to be someone we can trust</span><em>1 case →</em></button>
+    </div>
+  </section>
 </div>
 
 <section id="work">
@@ -985,19 +1012,19 @@ nav.main a.on{color:var(--ink)}
     </div>
     <div class="filters" role="group" aria-label="Filter by theme">
       <button type="button" aria-pressed="true" data-f="all">All</button>
-      <button type="button" aria-pressed="false" data-f="home">AI at home</button>
-      <button type="button" aria-pressed="false" data-f="data">Data &amp; privacy</button>
-      <button type="button" aria-pressed="false" data-f="trust">Trust in algorithms</button>
-      <button type="button" aria-pressed="false" data-f="team">AI at work</button>
+      <button type="button" aria-pressed="false" data-f="companion">AI companions</button>
+      <button type="button" aria-pressed="false" data-f="matchmaker">AI matchmakers</button>
+      <button type="button" aria-pressed="false" data-f="teammate">AI teammates</button>
+      <button type="button" aria-pressed="false" data-f="scam">Scambots</button>
       <span class="count" id="count" aria-live="polite"></span>
     </div>
 
     <div class="cases" id="clist">
 
       <!-- CheckMyVA -->
-      <article class="case" data-s="data" id="checkmyva" data-thumb="img/checkmyva-demo.jpg">
+      <article class="case" data-s="companion" id="checkmyva" data-thumb="img/checkmyva-demo.jpg">
         <div class="case-head">
-          <p class="theme">AI at home · Data visualisation tool</p>
+          <p class="theme">AI companions · Accountability tool</p>
           <h3>CheckMyVA: helping people see and act on their voice assistant data</h3>
           <p class="lede">A browser tool that lets households request, explore and manage the data their Alexa or Google Assistant collects, designed and tested with households in a three-year living lab.</p>
         </div>
@@ -2055,9 +2082,9 @@ nav.main a.on{color:var(--ink)}
         </section>
       </article>
 
-      <article class="case" data-s="home" id="domestication" data-thumb="img/dom-interview.jpg">
+      <article class="case" data-s="companion" id="domestication" data-thumb="img/dom-interview.jpg">
         <div class="case-head">
-          <p class="theme">AI at home · Research framework</p>
+          <p class="theme">AI companions · Trust over time</p>
           <h3>Beyond the first weeks: how voice assistants find a home over three years</h3>
           <p class="lede">Thirty households followed for three years. From their stories I developed the domestication calculus, a framework for tracing how a technology finds, or fails to find, a place in everyday life.</p>
         </div>
@@ -2226,9 +2253,9 @@ document.querySelectorAll('[data-tl]').forEach(function(w){
       
 
       <!-- Taiwan -->
-      <article class="case" data-s="home">
+      <article class="case" data-s="companion">
         <div class="case-head">
-          <p class="theme">AI at home · Workshop facilitation</p>
+          <p class="theme">AI companions · When the relationship ends</p>
           <h3>Playing the technology: a breakup in the smart home</h3>
           <p class="lede">A workshop in Taipei where participants became the devices in a couple's home and acted out what those devices should do when the relationship ends.</p>
         </div>
@@ -2293,9 +2320,9 @@ document.querySelectorAll('[data-tl]').forEach(function(w){
       
 
       <!-- GDPR -->
-      <article class="case compact" data-s="data" data-thumb="img/gdpr-sus.svg">
+      <article class="case compact" data-s="companion" data-thumb="img/gdpr-sus.svg">
         <div class="case-head">
-          <p class="theme">Data &amp; privacy</p>
+          <p class="theme">AI companions · The company behind the system</p>
           <h3>Usability testing the GDPR in practice</h3>
           <p class="lede">The GDPR gives everyone the right to see the data companies hold about them. We measured how usable that right really is.</p>
         </div>
@@ -2400,9 +2427,9 @@ ns.forEach(function(n){n.addEventListener('click',function(){s(+n.dataset.i)})})
 </style>
 
       <!-- Dating apps -->
-      <article class="case" data-s="trust">
+      <article class="case" data-s="matchmaker">
         <div class="case-head">
-          <p class="theme">Trust in algorithms</p>
+          <p class="theme">AI matchmakers · Exploitation by design</p>
           <h3>When the matchmaker does not have your interest at heart</h3>
           <p class="lede">Dating apps promise to help you find a partner. Their business model works best if you keep searching. How do users experience that tension?</p>
         </div>
@@ -2534,12 +2561,46 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
 
 
 
-      <!-- KI-Innovativ -->
-      <article class="case" data-s="team" data-thumb="img/ki-process.svg">
+      <!-- Scambots -->
+      <article class="case compact" data-s="scam" id="scambots" data-thumb="img/scambot-chat.svg">
         <div class="case-head">
-          <p class="theme">AI at work · Current</p>
-          <h3>AI-supported onboarding in public administration</h3>
-          <p class="lede">What role should an AI agent play when someone joins a public administration, and how can it make onboarding more inclusive?</p>
+          <p class="theme">Scambots · Exploited trust</p>
+          <h3>Scambots: when the relationship is the attack</h3>
+          <p class="lede">Scams increasingly run through chat and synthetic voices. They work by building a relationship first and exploiting it later. With colleagues I study how these scams play out in people's lives and what bots change about them.</p>
+        </div>
+        <div class="contrib"><p class="label">My contribution</p><p>First author of the CSCW 2023 social engineering study; co-author of the romance scam and synthetic voice studies led by Sima Amirkhani; co-author with Gunnar Stevens of the chapter “Scambots: Deception at Scale”</p></div>
+        <dl class="summary s3">
+          <div><dt>Published</dt><dd>CSCW 2023 · CHI EA 2024 · CSCW 2025 (Honorable Mention) · CHI 2026 · MobileHCI 2026 · Cambridge University Press (forthcoming)</dd></div>
+          <div><dt>Team</dt><dd>Sima Amirkhani, Gunnar Stevens, David Randall, Douglas Zytko and others</dd></div>
+          <div><dt>Focus</dt><dd>Romance scams, synthetic voice deception, social engineering, scambots</dd></div>
+        </dl>
+        <figure class="case-fig cf-wide">
+          <img src="img/scambot-chat.svg" alt="Illustrative chat with a contact called Sam: friendly messages build trust, then a voice message that sounds just like Sam, then an urgent story about being stuck at the airport, then a request for 400 euros or a private photo" loading="lazy" width="1200" height="750">
+          <figcaption>How a scam relationship unfolds: trust, a familiar voice, urgency, then the ask. Illustrative, not real data.</figcaption>
+        </figure>
+        <div class="stages">
+          <section class="stage acc" data-acc>
+          <button type="button" class="acc-h" aria-expanded="false"><span class="acc-n">01</span><span class="acc-t">Problem</span><i aria-hidden="true"></i></button>
+          <div class="acc-b"><div class="acc-in"><p>A scam is a relationship that was never meant to last. Conversational AI makes it possible to build that relationship at scale, in any language and in a voice you already know.</p></div></div>
+        </section>
+          <section class="stage acc" data-acc>
+          <button type="button" class="acc-h" aria-expanded="false"><span class="acc-n">02</span><span class="acc-t">What the studies cover</span><i aria-hidden="true"></i></button>
+          <div class="acc-b"><div class="acc-in"><ul class="sus-gl">
+            <li><b>Synthetic voices</b> Pressure and urgency in synthetic voice deception (MobileHCI 2026)</li>
+            <li><b>Romance scams</b> Online dating scams in Iran that exploit parental pressure and target minors (CHI 2026), or seek sexual access over money (CSCW 2025, CHI EA 2024)</li>
+            <li><b>Social engineering</b> “Delaying” as a technique scammers use after the attack (CSCW 2023)</li>
+            <li><b>Scambots</b> A chapter defining scambots and deception at scale, for the volume <i>Chatbot Psychology</i> (Cambridge University Press)</li>
+          </ul></div></div>
+        </section>
+        </div>
+      </article>
+
+      <!-- KI-Innovativ -->
+      <article class="case" data-s="teammate" data-thumb="img/ki-process.svg">
+        <div class="case-head">
+          <p class="theme">AI teammates · Trust &amp; acceptance · Current</p>
+          <h3>An AI teammate at work: trust and acceptance of an onboarding agent</h3>
+          <p class="lede">When someone joins a public administration, an AI agent could be one of their first teammates. We study which role it should take, from buddy to mentor, and what it needs for people to trust and accept it at work.</p>
         </div>
         <div class="contrib"><p class="label">My contribution</p><p>Group lead: stakeholder management, co-design workshops and journey mapping, data protection analysis and AI compliance management</p></div>
         <dl class="summary s3">
@@ -2652,12 +2713,12 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
       <p>Grouped by theme. Click a theme to see the papers.</p>
     </div>
     <div class="pubgroup fold">
-      <h3 class="fold-h"><button type="button" aria-expanded="false" aria-controls="pg0"><span class="fh-t">AI at home &amp; voice assistants</span><span class="fh-n">8</span><i aria-hidden="true"></i></button></h3>
-      <div class="fold-b" id="pg0"><div><ul class="pubs"><li><span class="y">2026</span><p class="cite"><b>Alizadeh, M.</b>, Lee, M., Randall, D., Tolmie, P., Pins, D., &amp; Stevens, G. (2026). <span class="t">Finding a Home for Voice Assistants: A Domestication Calculus Across Three Years and Thirty Households</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2026</span><p class="cite">Xu, Y., Lee, M., Wensveen, S., <b>Alizadeh, M.</b>, &amp; Funk, M. (2026). <span class="t">Conversing with Objects toward Fluid Human and Artificial Identities during Life Transitions</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2025</span><p class="cite">Pins, D., <b>Alizadeh, F.</b>, Boden, A., Zilles, S., &amp; Stevens, G. (2025). <span class="t">Demystification of Technology: Empowering Consumers to Access and Visualize Voice Interaction Data</span>. In Habscheid, S., Hector, T. et al. (Eds.), <i>Voice Assistants in Private Homes</i>. transcript.</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, F.</b>, Tolmie, P., Lee, M., Wintersberger, P., Pins, D., &amp; Stevens, G. (2024). <span class="t">Voice Assistants’ Accountability through Explanatory Dialogues</span>. <i>Proceedings of the 6th ACM Conference on Conversational User Interfaces</i> (CUI ’24), 1–12. ACM.</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, F.</b>, Randall, D., Tolmie, P., Lee, M., Xu, Y., Mennicken, S., et al. (2024). <span class="t">Future of Home-living: Designing Smart Spaces for Modern Domestic Life</span>. Workshop at ECSCW 2024. <i>arXiv:2407.15956</i>.</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b>, Pins, D., &amp; Stevens, G. (2023). <span class="t">User-friendly Explanatory Dialogues</span>. <i>Mensch und Computer 2023 – Workshopband</i>. GI.</p></li><li><span class="y">2021</span><p class="cite">Pins, D., Jakobi, T., Boden, A., <b>Alizadeh, F.</b>, &amp; Wulf, V. (2021). <span class="t">Alexa, We Need to Talk: A Data Literacy Approach on Voice Assistants</span>. <i>Proceedings of the 2021 ACM Designing Interactive Systems Conference</i> (DIS ’21), 495–507. ACM.</p></li><li><span class="y">2021</span><p class="cite">Pins, D., &amp; <b>Alizadeh, F.</b> (2021). <span class="t">„Im Wohnzimmer kriegt die schon alles mit“: Sprachassistentendaten im Alltag</span>. In Boden, A., Jakobi, T., Stevens, G., &amp; Bala, C. (Eds.), <i>Verbraucherdatenschutz</i>. Schriften der Verbraucherinformatik.</p></li></ul></div></div>
+      <h3 class="fold-h"><button type="button" aria-expanded="false" aria-controls="pg1"><span class="fh-t">Deception, scams &amp; exploited trust</span><span class="fh-n">11</span><i aria-hidden="true"></i></button></h3>
+      <div class="fold-b" id="pg1"><div><ul class="pubs"><li><span class="y">2026</span><p class="cite">Amirkhani, S., Agyemang, A. N., Larty, D. A., Boateng, D. T., <b>Alizadeh, M.</b>, Boden, A., et al. (2026). <span class="t">“He Put Too Much Pressure on Me”: Pressure and Urgency in Synthetic Voice Deception</span>. <i>Proceedings of the 28th International Conference on Mobile Human-Computer Interaction</i> (MobileHCI ’26). ACM.</p></li><li><span class="y">2026</span><p class="cite">Amirkhani, S., <b>Alizadeh, M.</b>, Randall, D., Stevens, G., &amp; Zytko, D. (2026). <span class="t">“My Parents’ Expectations Were Overwhelming”: Online Dating Romance Scams Targeting Minors in Iran Through Exploitation of Parental Pressure</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2025</span><p class="cite">Amirkhani, S., <b>Alizadeh, M.</b>, Randall, D., Stevens, G., &amp; Zytko, D. (2025). <span class="t">“Society Encourages the Killing of Girls Like Me”: Layers of Victimization in Online Dating Romance Scams in Iran That Target Sexual Access Over Financial Gain</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 9(7), 1–25 (CSCW 2025).</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, M.</b>, Lawo, D., Stevens, G., Zytko, D., &amp; Eslami, M. (2024). <span class="t">When the “Matchmaker” Does Not Have Your Interest at Heart: Perceived Algorithmic Harms, Folk Theories, and Users’ Counter-Strategies on Tinder</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 8(CSCW2), 1–29 (CSCW 2024).</p></li><li><span class="y">2024</span><p class="cite">Vereschak, O., <b>Alizadeh, F.</b>, Bailly, G., &amp; Caramiaux, B. (2024). <span class="t">Trust in AI-Assisted Decision Making: Perspectives from Those Behind the System and Those for Whom the Decision Is Made</span>. <i>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems</i> (CHI ’24). ACM.</p></li><li><span class="y">2024</span><p class="cite">Amirkhani, S., <b>Alizadeh, F.</b>, Randall, D., &amp; Stevens, G. (2024). <span class="t">Beyond Dollars: Unveiling the Deeper Layers of Online Romance Scams Introducing “Body Scam”</span>. <i>Extended Abstracts of the CHI Conference on Human Factors in Computing Systems</i> (CHI EA ’24). ACM.</p></li><li><span class="y">2024</span><p class="cite">Stevens, G., Boden, A., <b>Alizadeh, F.</b>, Jakobi, T., Walther, M., &amp; Krüger, J. (2024). <span class="t">Wie gehen Verbraucher:innen mit Onlinebetrug um? Eine Literaturübersicht</span>. In <i>Handbuch Cyberkriminologie 2: Phänomene und Auswirkungen</i>, 533–554. Springer.</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b>, Stevens, G., Jakobi, T., &amp; Krüger, J. (2023). <span class="t">Catch Me if You Can: “Delaying” as a Social Engineering Technique in the Post-Attack Phase</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 7(CSCW1), 1–25 (CSCW 2023).</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b> (2023). <span class="t">Would You Say, I Can Get My Money Back?</span>. In <i>Torn Many Ways: Politics, Conflict and Emotion in Research</i>, 91–104. Springer.</p></li><li><span class="y">2022</span><p class="cite"><b>Alizadeh, F.</b>, Stevens, G., Vereschak, O., Bailly, G., Caramiaux, B., &amp; Pins, D. (2022). <span class="t">Building Appropriate Trust in Human-AI Interactions</span>. <i>Proceedings of the 20th European Conference on Computer-Supported Cooperative Work</i> (ECSCW 2022). EUSSET.</p></li><li><span class="y">Forthc.</span><p class="cite">Stevens, G., &amp; <b>Alizadeh, F.</b> (forthcoming). Two chapters: <span class="t">Scambots: Deception at Scale</span> and <span class="t">Human-Chatbot Relationships</span>. In <i>Chatbot Psychology</i>. Cambridge University Press.</p></li></ul></div></div>
     </div>
     <div class="pubgroup fold">
-      <h3 class="fold-h"><button type="button" aria-expanded="false" aria-controls="pg1"><span class="fh-t">Trust, deception &amp; scams</span><span class="fh-n">11</span><i aria-hidden="true"></i></button></h3>
-      <div class="fold-b" id="pg1"><div><ul class="pubs"><li><span class="y">2026</span><p class="cite">Amirkhani, S., Agyemang, A. N., Larty, D. A., Boateng, D. T., <b>Alizadeh, M.</b>, Boden, A., et al. (2026). <span class="t">“He Put Too Much Pressure on Me”: Pressure and Urgency in Synthetic Voice Deception</span>. <i>Proceedings of the 28th International Conference on Mobile Human-Computer Interaction</i> (MobileHCI ’26). ACM.</p></li><li><span class="y">2026</span><p class="cite">Amirkhani, S., <b>Alizadeh, M.</b>, Randall, D., Stevens, G., &amp; Zytko, D. (2026). <span class="t">“My Parents’ Expectations Were Overwhelming”: Online Dating Romance Scams Targeting Minors in Iran Through Exploitation of Parental Pressure</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2025</span><p class="cite">Amirkhani, S., <b>Alizadeh, M.</b>, Randall, D., Stevens, G., &amp; Zytko, D. (2025). <span class="t">“Society Encourages the Killing of Girls Like Me”: Layers of Victimization in Online Dating Romance Scams in Iran That Target Sexual Access Over Financial Gain</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 9(7), 1–25 (CSCW 2025).</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, M.</b>, Lawo, D., Stevens, G., Zytko, D., &amp; Eslami, M. (2024). <span class="t">When the “Matchmaker” Does Not Have Your Interest at Heart: Perceived Algorithmic Harms, Folk Theories, and Users’ Counter-Strategies on Tinder</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 8(CSCW2), 1–29 (CSCW 2024).</p></li><li><span class="y">2024</span><p class="cite">Vereschak, O., <b>Alizadeh, F.</b>, Bailly, G., &amp; Caramiaux, B. (2024). <span class="t">Trust in AI-Assisted Decision Making: Perspectives from Those Behind the System and Those for Whom the Decision Is Made</span>. <i>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems</i> (CHI ’24). ACM.</p></li><li><span class="y">2024</span><p class="cite">Amirkhani, S., <b>Alizadeh, F.</b>, Randall, D., &amp; Stevens, G. (2024). <span class="t">Beyond Dollars: Unveiling the Deeper Layers of Online Romance Scams Introducing “Body Scam”</span>. <i>Extended Abstracts of the CHI Conference on Human Factors in Computing Systems</i> (CHI EA ’24). ACM.</p></li><li><span class="y">2024</span><p class="cite">Stevens, G., Boden, A., <b>Alizadeh, F.</b>, Jakobi, T., Walther, M., &amp; Krüger, J. (2024). <span class="t">Wie gehen Verbraucher:innen mit Onlinebetrug um? Eine Literaturübersicht</span>. In <i>Handbuch Cyberkriminologie 2: Phänomene und Auswirkungen</i>, 533–554. Springer.</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b>, Stevens, G., Jakobi, T., &amp; Krüger, J. (2023). <span class="t">Catch Me if You Can: “Delaying” as a Social Engineering Technique in the Post-Attack Phase</span>. <i>Proceedings of the ACM on Human-Computer Interaction</i>, 7(CSCW1), 1–25 (CSCW 2023).</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b> (2023). <span class="t">Would You Say, I Can Get My Money Back?</span>. In <i>Torn Many Ways: Politics, Conflict and Emotion in Research</i>, 91–104. Springer.</p></li><li><span class="y">2022</span><p class="cite"><b>Alizadeh, F.</b>, Stevens, G., Vereschak, O., Bailly, G., Caramiaux, B., &amp; Pins, D. (2022). <span class="t">Building Appropriate Trust in Human-AI Interactions</span>. <i>Proceedings of the 20th European Conference on Computer-Supported Cooperative Work</i> (ECSCW 2022). EUSSET.</p></li><li><span class="y">Forthc.</span><p class="cite">Stevens, G., &amp; <b>Alizadeh, F.</b> (forthcoming). Two chapters: <span class="t">Scambots: Deception at Scale</span> and <span class="t">Human-Chatbot Relationships</span>. In <i>Chatbot Psychology</i>. Cambridge University Press.</p></li></ul></div></div>
+      <h3 class="fold-h"><button type="button" aria-expanded="false" aria-controls="pg0"><span class="fh-t">AI companions &amp; voice assistants</span><span class="fh-n">8</span><i aria-hidden="true"></i></button></h3>
+      <div class="fold-b" id="pg0"><div><ul class="pubs"><li><span class="y">2026</span><p class="cite"><b>Alizadeh, M.</b>, Lee, M., Randall, D., Tolmie, P., Pins, D., &amp; Stevens, G. (2026). <span class="t">Finding a Home for Voice Assistants: A Domestication Calculus Across Three Years and Thirty Households</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2026</span><p class="cite">Xu, Y., Lee, M., Wensveen, S., <b>Alizadeh, M.</b>, &amp; Funk, M. (2026). <span class="t">Conversing with Objects toward Fluid Human and Artificial Identities during Life Transitions</span>. <i>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</i> (CHI ’26). ACM.</p></li><li><span class="y">2025</span><p class="cite">Pins, D., <b>Alizadeh, F.</b>, Boden, A., Zilles, S., &amp; Stevens, G. (2025). <span class="t">Demystification of Technology: Empowering Consumers to Access and Visualize Voice Interaction Data</span>. In Habscheid, S., Hector, T. et al. (Eds.), <i>Voice Assistants in Private Homes</i>. transcript.</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, F.</b>, Tolmie, P., Lee, M., Wintersberger, P., Pins, D., &amp; Stevens, G. (2024). <span class="t">Voice Assistants’ Accountability through Explanatory Dialogues</span>. <i>Proceedings of the 6th ACM Conference on Conversational User Interfaces</i> (CUI ’24), 1–12. ACM.</p></li><li><span class="y">2024</span><p class="cite"><b>Alizadeh, F.</b>, Randall, D., Tolmie, P., Lee, M., Xu, Y., Mennicken, S., et al. (2024). <span class="t">Future of Home-living: Designing Smart Spaces for Modern Domestic Life</span>. Workshop at ECSCW 2024. <i>arXiv:2407.15956</i>.</p></li><li><span class="y">2023</span><p class="cite"><b>Alizadeh, F.</b>, Pins, D., &amp; Stevens, G. (2023). <span class="t">User-friendly Explanatory Dialogues</span>. <i>Mensch und Computer 2023 – Workshopband</i>. GI.</p></li><li><span class="y">2021</span><p class="cite">Pins, D., Jakobi, T., Boden, A., <b>Alizadeh, F.</b>, &amp; Wulf, V. (2021). <span class="t">Alexa, We Need to Talk: A Data Literacy Approach on Voice Assistants</span>. <i>Proceedings of the 2021 ACM Designing Interactive Systems Conference</i> (DIS ’21), 495–507. ACM.</p></li><li><span class="y">2021</span><p class="cite">Pins, D., &amp; <b>Alizadeh, F.</b> (2021). <span class="t">„Im Wohnzimmer kriegt die schon alles mit“: Sprachassistentendaten im Alltag</span>. In Boden, A., Jakobi, T., Stevens, G., &amp; Bala, C. (Eds.), <i>Verbraucherdatenschutz</i>. Schriften der Verbraucherinformatik.</p></li></ul></div></div>
     </div>
     <div class="pubgroup fold">
       <h3 class="fold-h"><button type="button" aria-expanded="false" aria-controls="pg2"><span class="fh-t">Privacy &amp; data rights</span><span class="fh-n">8</span><i aria-hidden="true"></i></button></h3>
@@ -2713,7 +2774,7 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
           <button type="button" id="copy">Copy email</button>
         </div>
       </div>
-      <p>I'm always happy to talk about research collaborations, invited talks and workshops on how people live and work with AI.</p>
+      <p>I'm always happy to talk about research collaborations, invited talks and workshops on relationships with conversational AI: how trust grows, how it gets exploited, and who is accountable.</p>
     </div>
     <footer class="foot">
       <span>© 2026 Mahla Alizadeh</span>
@@ -2907,6 +2968,7 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
   }
   btns.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.f)})});
   apply('all');
+  [].slice.call(document.querySelectorAll('.study-card')).forEach(function(c){c.addEventListener('click',function(){apply(c.dataset.go);var w=document.getElementById('work');if(w)w.scrollIntoView({behavior:'smooth',block:'start'})})});
 
   var copy=document.getElementById('copy');
   copy.addEventListener('click',function(){
@@ -2918,5 +2980,4 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
 })();
 </script>
 
-</body>
-</html>
+</body></html>
