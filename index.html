@@ -2562,7 +2562,7 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
 
 
       <!-- Scambots -->
-      <article class="case compact" data-s="scam" id="scambots" data-thumb="img/scambot-chat.svg">
+      <article class="case compact" data-s="scam" id="scambots" data-all="hide" data-thumb="img/scambot-chat.svg">
         <div class="case-head">
           <p class="theme">Scambots · Exploited trust</p>
           <h3>Scambots: when the relationship is the attack</h3>
@@ -2962,7 +2962,7 @@ document.querySelectorAll('.hm-row').forEach(function(r){r.addEventListener('cli
   var count=document.getElementById('count');
   function apply(f){
     var n=0;
-    items.forEach(function(p){var show=f==='all'||p.dataset.s===f;p.hidden=!show;if(show)n++});
+    items.forEach(function(p){var show=f==='all'?p.dataset.all!=='hide':p.dataset.s===f;p.hidden=!show;if(show)n++});
     btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.f===f))});
     count.textContent=n+(n===1?' case':' cases');
   }
